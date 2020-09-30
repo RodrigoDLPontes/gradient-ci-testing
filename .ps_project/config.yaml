@@ -1,0 +1,12 @@
+version: 2
+
+workflows:
+  single-node:
+    steps:
+      -
+        name: "eva-ci-test"
+        command: experiment.run_single_node
+        params:
+          command: python test.py
+          container: pytorch/pytorch:latest
+          machineType: "M4000"
