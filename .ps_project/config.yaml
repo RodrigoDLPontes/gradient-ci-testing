@@ -9,4 +9,4 @@ workflows:
         params:
           command: python test.py
           container: pytorch/pytorch:latest
-          machineType: "M4000"
+          machineType: "P5000"
