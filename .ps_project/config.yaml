@@ -7,6 +7,6 @@ workflows:
         name: "eva-ci-test"
         command: experiment.run_single_node
         params:
-          command: python test.py
+          command: bash run.sh
           container: pytorch/pytorch:latest
           machineType: "P4000"
