@@ -32,9 +32,9 @@ def main():
 
 def train(model, optimizer, criterion, train_loader, epochs):
     model.train()
-    print('Starting training...')
+    # print('Starting training...')
     for i in range(epochs):
-        print(f'Running epoch {i + 1}')
+        # print(f'Running epoch {i + 1}')
         for batch_idx, batch in enumerate(train_loader):
             images, targets = map(lambda b: b.cuda(), batch)
             optimizer.zero_grad()
@@ -42,12 +42,12 @@ def train(model, optimizer, criterion, train_loader, epochs):
             loss = criterion(output, targets)
             loss.backward()
             optimizer.step()
-            print(f'\tMini-batch training loss: {loss.item()}')
+            # print(f'\tMini-batch training loss: {loss.item()}')
 
 def test(model, optimizer, criterion, test_loader, n_samples):
     loss = 0
     model.eval()
-    print('Testing...')
+    # print('Testing...')
     for batch_idx, batch in enumerate(test_loader):
         images, targets = map(lambda b: b.cuda(), batch)
         output = model(images)
