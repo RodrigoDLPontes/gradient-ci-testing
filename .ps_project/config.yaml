@@ -9,4 +9,4 @@ workflows:
         params:
           command: python test.py
           container: pytorch/pytorch:latest
-          machineType: "P5000"
+          machineType: "GPU"
