@@ -7,6 +7,6 @@ workflows:
         name: "eva-ci-test"
         command: experiment.run_single_node
         params:
-          command: bash run.sh
+          command: python test.py
           container: pytorch/pytorch:latest
           machineType: "GPU+"
