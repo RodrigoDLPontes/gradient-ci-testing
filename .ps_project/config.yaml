@@ -9,4 +9,5 @@ workflows:
         params:
           command: python test.py
           container: pytorch/pytorch:latest
-          machineType: "GPU+"
+          machineType: "K80"
+          isPreemptible: true
