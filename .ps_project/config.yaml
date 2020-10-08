@@ -9,4 +9,4 @@ workflows:
         params:
           command: bash run.sh
           container: pytorch/pytorch:latest
-          machineType: "P4000"
+          machineType: "GPU+"
