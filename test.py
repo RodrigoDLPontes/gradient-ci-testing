@@ -22,7 +22,7 @@ def main():
         transforms.Normalize(mean, std)
     ])
     train_data = datasets.MNIST('data', train=True, download=True, transform=transform)
-    test_data = datasets..MNIST('data', train=False, download=True, transform=transform)
+    test_data = datasets.MNIST('data', train=False, download=True, transform=transform)
     train_loader = DataLoader(train_data, batch_size=256, shuffle=True)
     test_loader = DataLoader(test_data, batch_size=256, shuffle=True)
     # Execution
